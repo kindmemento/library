@@ -1,5 +1,6 @@
 const library = document.querySelector('.library')
 const card = document.querySelector('.card')
+const addCard = document.querySelector('.add-card')
 const plus = document.querySelector('.plus')
 const form = document.querySelector('.form')
 const title = document.querySelector('#title').value
@@ -20,7 +21,6 @@ document.addEventListener('keydown', function(event){
 	}
 });
 
-
 let myLibrary = []
 
 
@@ -34,11 +34,11 @@ function addBook() {
   closeForm();
   const newbook = document.createElement('div')
   newbook.classList.add('card')
-  library.insertBefore(newbook, card)
+  library.insertBefore(newbook, addCard)
 
   const options = document.createElement('div')
   options.classList.add('options')
   newbook.appendChild(options)
-  library.insertBefore(newbook, card)
+  library.insertBefore(newbook, addCard)
 }
 
