@@ -148,8 +148,6 @@ input[type=number], select, textarea {
   margin: auto;
   padding: 0 20px;
   width: 40%;
-  border: 1px solid black;
-  border-style: double;
   border-radius: 20px;
   justify-content: center;
 }
@@ -160,6 +158,8 @@ input[type=number], select, textarea {
   border-radius: 10px;
   font-size: 20px;
   transition: 0.2s;
+  font-size: 3em;
+  
 }
 
 .cancel-btn:hover {
@@ -173,6 +173,7 @@ input[type=number], select, textarea {
   border-radius: 10px;
   font-size: 20px;
   transition: 0.2s;
+  font-size: 3em;
 }
 
 .add-btn:hover {
