@@ -10,14 +10,6 @@ body {
   background-color: rgb(12, 27, 54)
 }
 
-.h1 {
-  font-family: monospace;
-  color: rgb(184, 184, 184);
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .library {
   margin-top: 30px;
   text-align: center;
@@ -25,25 +17,6 @@ body {
 
 .library > * {
   margin: 10px;
-}
-
-.card {
-  display: inline-flex;
-  color: gray;
-  border-style: solid;
-  width: 350px;
-  height: 350px;
-  border-radius: 50px;
-  background-color: rgb(12, 27, 54);
-  top: 50%;
-  left: 50%;
-  opacity: 50%;
-  transition: 0.2s;
-}
-
-.card:hover {
-  opacity: 100%;
-  cursor: pointer;
 }
 
 .plus {
@@ -74,17 +47,7 @@ body {
   background-color: green;
 }
 
-.add-title {
-  background-color: whitesmoke;
-  margin: auto;
-  padding: 0 20px;
-  width: 40%;
-  border: 1px solid black;
-  border-style: double;
-  border-radius: 20px;
-  text-align: center;
-}
-
+/*form styling start*/
 .form {
   display: none;
   position: fixed;
@@ -97,86 +60,135 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
 
-.element {
-  background-color: whitesmoke;
-  margin: auto;
-  padding: 20px;
-  width: 40%;
-  border: 1px solid black;
-  border-style: solid;
-  border-radius: 20px;
-}
+  /*header styling start*/
+  .add-title {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 0 20px;
+    width: 40%;
+    border: 1px solid black;
+    border-style: double;
+    border-radius: 20px;
+    text-align: center;
+  }
 
-.read {
-  margin: auto;
-  padding: 20px;
-  width: 40%;
-  border: 1px solid black;
-  border-style: solid;
-  border-radius: 20px;
-  background-color: whitesmoke;
-}
+  .h1 {
+    font-family: monospace;
+    color: rgb(184, 184, 184);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /*header styling end*/
 
-input[type=text], select, textarea {
-  width: 90%;
-  padding: 12px;
-  background: none;
-  background-color: none;
-  resize: vertical;
-  font-size: 1.5em;
-  font-weight: bold;
-}
+  .element {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    border: 1px solid black;
+    border-style: solid;
+    border-radius: 20px;
+  }
 
-input[type=number], select, textarea {
-  width: 90%;
-  padding: 12px;
-  background: none;
-  background-color: none;
-  resize: vertical;
-  font-size: 1.5em;
-  font-weight: bold;
-}
+  .read {
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    border: 1px solid black;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: whitesmoke;
+  }
 
-/*options under add form*/
-.options {
-  display: flex;
-  background: none;
-  margin: auto;
-  padding: 0 20px;
-  width: 40%;
-  border-radius: 20px;
-  justify-content: center;
-}
+  input[type=text], select, textarea {
+    width: 90%;
+    padding: 12px;
+    background: none;
+    background-color: none;
+    resize: vertical;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 
-.cancel-btn {
-  background-color: red;
-  opacity: 50%;
-  border-radius: 10px;
-  font-size: 20px;
-  transition: 0.2s;
-  font-size: 3em;
+  input[type=number], select, textarea {
+    width: 90%;
+    padding: 12px;
+    background: none;
+    background-color: none;
+    resize: vertical;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /*options styling start*/
+  .options {
+    display: flex;
+    background: none;
+    margin: auto;
+    padding: 0 20px;
+    width: 40%;
+    border-radius: 20px;
+    justify-items: center;
+  }
   
-}
+  .cancel-btn {
+    background-color: red;
+    opacity: 50%;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.2s;
+    font-size: 3em;
+    
+  }
+  
+  .cancel-btn:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    background-color: green;
+    opacity: 50%;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.2s;
+    font-size: 3em;
+  }
+  
+  .add-btn:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+  /*options styling end*/
+/*form styling end*/
 
-.cancel-btn:hover {
-  opacity: 100%;
-  cursor: pointer;
-}
-
-.add-btn {
-  background-color: green;
+/*book card styling start*/
+.book-card {
+  display: inline-block;
+  color: gray;
+  border-style: solid;
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+  background-color: rgb(12, 27, 54);
+  top: 50%;
+  left: 50%;
   opacity: 50%;
-  border-radius: 10px;
-  font-size: 20px;
   transition: 0.2s;
-  font-size: 3em;
 }
 
-.add-btn:hover {
+.book-card:hover {
   opacity: 100%;
   cursor: pointer;
 }
+
+  #title {
+    font-size: 3em;
+    ;
+  }
+
+/*book card styling end*/

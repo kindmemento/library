@@ -14,12 +14,13 @@
   </header>
 
   <body>
-    <div class="library">
-      <div class="add-card">
-        <span class="plus" onclick="openForm()">+</span>
-      </div>
 
-      <div class="form">
+    <div class="add-book">
+      <span class="plus" onclick="openForm()">+</span>
+    </div>
+
+    <div class="form">
+      <div class="container">
         <header class="add-title">
           <h1>Add a Book</h1>
         </header>
@@ -44,11 +45,14 @@
 
         <footer class="options">
           <button class="cancel-btn" onclick="closeForm()">Cancel</button>
-          <button class="add-btn" onclick="Book()">Add</button>
+          <button class="add-btn" onclick="addBookToLibrary()">Add</button>
         </footer>
-
+        
       </div>
     </div>
+
+    <div class="library"></div>
+    
     <script src="main.js" defer></script>
   </body>
 </html>
