@@ -1,12 +1,12 @@
 body {
   background-color: black;
+  font-family: monospace;
 }
 
 .main {
   left: 0;
   right: 0;
-  height: 100px;
-  margin-top: -10px;
+  height: 100%;
   background-color: rgb(12, 27, 54)
 }
 
@@ -53,8 +53,8 @@ body {
   position: fixed;
   box-sizing: border-box;
   z-index: 1;
-  padding: 300px;
-  padding-top: 10%;
+  padding: 10%;
+  padding-top: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -62,6 +62,11 @@ body {
   overflow: auto;
   backdrop-filter: blur(5px);
 }
+
+  .container {
+    text-align: center;
+    font-size: 1em;
+  }
 
   /*header styling start*/
   .add-title {
@@ -71,7 +76,6 @@ body {
     width: 40%;
     border: 1px solid black;
     border-style: double;
-    border-radius: 20px;
     text-align: center;
   }
 
@@ -91,17 +95,10 @@ body {
     width: 40%;
     border: 1px solid black;
     border-style: solid;
-    border-radius: 20px;
   }
 
-  .read {
-    margin: auto;
-    padding: 20px;
-    width: 40%;
-    border: 1px solid black;
-    border-style: solid;
-    border-radius: 20px;
-    background-color: whitesmoke;
+  label {
+    font-size: 2em;
   }
 
   input[type=text], select, textarea {
@@ -126,23 +123,15 @@ body {
 
   /*options styling start*/
   .options {
-    display: flex;
-    background: none;
-    margin: auto;
-    padding: 0 20px;
-    width: 40%;
-    border-radius: 20px;
+    display: inline-flex;
     justify-items: center;
   }
   
   .cancel-btn {
     background-color: red;
     opacity: 50%;
-    border-radius: 10px;
-    font-size: 20px;
     transition: 0.2s;
     font-size: 3em;
-    
   }
   
   .cancel-btn:hover {
@@ -153,8 +142,6 @@ body {
   .add-btn {
     background-color: green;
     opacity: 50%;
-    border-radius: 10px;
-    font-size: 20px;
     transition: 0.2s;
     font-size: 3em;
   }
@@ -169,12 +156,12 @@ body {
 /*book card styling start*/
 .book-card {
   display: inline-block;
-  color: gray;
-  border-style: solid;
-  width: 350px;
-  height: 350px;
-  border-radius: 50px;
+  color: white;
   background-color: rgb(12, 27, 54);
+  border-style: ridge;
+  border-color: white;
+  width: 400px;
+  height: 300px;
   top: 50%;
   left: 50%;
   opacity: 50%;
@@ -186,9 +173,42 @@ body {
   cursor: pointer;
 }
 
-  #title {
+.container {
+  margin-top: 60px;
+}
+
+  /*footer styling start*/
+  .remove-btn {
+    color: silver;
+    background-color: red;
+    border: none;
+    opacity: 50%;
+    transition: 0.2s;
     font-size: 3em;
-    ;
+    margin-top: 61.5px;
+    width: 100%;
+  }
+  
+  .remove-btn:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+
+  /*footer styling end*/
+
+  .title {
+    margin-top: 10px;
+    font-size: 2em;
+    font-style: italic;
+  }
+
+  .author {
+    font-size: 2em;
+  }
+
+  .pages {
+    margin-top: 30px;
+    font-size: 2em;
   }
 
 /*book card styling end*/
