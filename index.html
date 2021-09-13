@@ -9,9 +9,10 @@
 
   <header>
     <div class="main">
-    <h1 class="h1">Your Personal Library</h1>
+        <h2>Your Personal Library</h2>
+        <hr>
     </div>
-  </header>
+</header>
 
   <body>
 
@@ -20,35 +21,18 @@
     </div>
 
     <div class="form">
-      <div class="container">
-        <header class="add-title">
-          <h1>Add a Book</h1>
-        </header>
+       <input type="text" name="title" id="title" placeholder="Title">
+       <input type="text" name="author" id="author" placeholder="Author">
+       <input type="number" name="pages" id="pages" placeholder="Total Pages">
+       <div class="is-read">
+         <label for="is-read">Have you read it?</label>
+         <input type="checkbox">
+       </div>
 
-        <div class="element">
-          <label for="title" name="title">Book Title</label>
-          <input type="text" id="title">
-        </div>
-        <div class="element">
-          <label for="author" name="author">Author Name</label>
-          <input type="text" id="author">
-        </div>
-        <div class="element">
-          <label for="pages" name="pages">Total Page Number</label>
-          <input type="number" id="pages">
-        </div>
-        <div class="element">
-          <label for="completed-pages" name="completed-pages">How Many Pages Have You Read?</label>
-          <input type="number" id="completed-pages">
-        </div>
-
-        <footer class="options">
-          <button class="cancel-btn" onclick="closeForm()">Cancel</button>
-          <button class="add-btn" onclick="addBookToLibrary()">Add</button>
-        </footer>
-        
-      </div>
-    </div>
+       <footer class="options">
+         <button class="add-btn" onclick="addBookToLibrary()">Add to Library</button>
+       </footer>
+     </div>
 
     <div class="library"></div>
     
