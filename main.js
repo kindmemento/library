@@ -4,6 +4,7 @@ function Book(title, author, pages) {
     this.title = title,
     this.author = author,
     this.pages = pages
+    this.read = false
   };
 
 function addBookToLibrary() {
@@ -12,6 +13,10 @@ function addBookToLibrary() {
      return
    }
     const book = new Book(document.querySelector('#title').value, document.querySelector('#author').value, document.querySelector('#pages').value)
+
+    if (document.querySelector('#is-read').checked) {
+      book.read = true
+    }
 
     if (myLibrary.some((newbook) => newbook.title === book.title)) {
       alert('The book is already in the library.')
@@ -34,35 +39,54 @@ function resetLibrary() {
 function displayLibrary() {
   myLibrary.forEach((book) => {
   const bookCard = document.createElement('div')
-  const contentContainer = document.createElement('div')
-  const title = document.createElement('div')
-  const author = document.createElement('div')
-  const pages = document.createElement('div')
+  const title = document.createElement('h3')
+  const author = document.createElement('h3')
+  const pages = document.createElement('h3')
   const footer = document.createElement('footer')
+  const read = document.createElement('button')
   const hr = document.createElement('hr')
   const remove = document.createElement('button')
   
   bookCard.classList.add('book-card')
-  contentContainer.classList.add('container')
-  title.classList.add('title')
-  author.classList.add('author')
-  pages.classList.add('pages')
+  title.classList.add('h3')
+  author.classList.add('h3')
+  pages.classList.add('h3')
+  read.classList.add('read')
   remove.classList.add('remove-btn')
   
   title.innerText = book.title
   author.innerText = 'by ' + book.author
   pages.innerText = book.pages + ' pages'
+  if (book.read) {
+    read.innerText = 'Read'
+    read.style.color = 'green'
+  } else {
+    read.innerText = 'Not read'
+    read.style.color = 'red'
+  }
   remove.innerText = 'Remove'
   
   document.querySelector('.library').appendChild(bookCard)
-  bookCard.appendChild(contentContainer)
-  contentContainer.appendChild(title)
-  contentContainer.appendChild(author)
-  contentContainer.appendChild(pages)
-  contentContainer.appendChild(footer)
+  bookCard.appendChild(title)
+  bookCard.appendChild(author)
+  bookCard.appendChild(pages)
+  bookCard.appendChild(read)
+  bookCard.appendChild(footer)
   footer.appendChild(hr)
   footer.appendChild(remove)
   
+  read.onclick = () => {
+    if (book.read) {
+      read.innerText = 'Not read'
+      read.style.color = 'red'
+      book.read = false
+    } else {
+      read.innerText = 'Read'
+      read.style.color = 'green'
+      book.read = true
+    }
+  }
+
   remove.onclick = () => {
     myLibrary = myLibrary.filter((bookObj) => bookObj.title !== book.title)
     document.querySelector('.library').removeChild(bookCard)
