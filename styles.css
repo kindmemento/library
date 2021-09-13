@@ -99,14 +99,14 @@ h2 {
   display: inline-block;
   color: white;
   background-color: rgb(12, 27, 54);
-  border-style: ridge;
-  border-radius: 10%;
-  border-color: white;
-  padding: 2vmin;
-  width: min-content;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  padding: 15px;
+  width: max-content;
   height: min-content;
   opacity: 75%;
   transition: 0.2s;
+  word-wrap: break-word;
 }
 
 .book-card:hover {
@@ -114,8 +114,20 @@ h2 {
   cursor: pointer;
 }
 
-.container {
-  margin: auto;
+h3 {
+  font-size: 1.5em;
+}
+
+.read {
+  background: none;
+  background-color: none;
+  border: none;
+  margin-top: 10px;
+  font-size: 3em;
+}
+
+hr {
+  margin-top: 20px;
 }
 
   /*footer styling start*/
@@ -123,10 +135,11 @@ h2 {
     color: silver;
     background: none;
     border: none;
-    opacity: 50%;
+    opacity: 100%;
     transition: 0.3s;
     font-size: 3em;
     width: 100%;
+    color: rgb(255, 78, 78);
   }
   
   .remove-btn:hover {
@@ -137,25 +150,5 @@ h2 {
 
   /*footer styling end*/
 
-  .title {
-    margin: auto;
-    font-size: 3em;
-    font-style: italic;
-    width: min-content;
-    height: min-content;
-  }
-
-  .author {
-    font-size: 2em;
-  }
-
-  .pages {
-    margin-top: 20px;
-    font-size: 2em;
-  }
-
-  hr {
-    margin-top: 20px;
-  }
 
 /*book card styling end*/
