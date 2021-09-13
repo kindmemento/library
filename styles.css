@@ -12,7 +12,7 @@ h2 {
 }
 
 .library {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -56,7 +56,6 @@ h2 {
   z-index: 1;
   padding: 1%;
   width: min-content;
-  height: m;
   margin: auto;
   overflow: auto;
   backdrop-filter: blur(5px);
@@ -81,36 +80,18 @@ h2 {
     height: 30px;
   }
 
-  /*options styling start*/
-  .options {
-    margin: auto;
-    justify-items: center;
-  }
-  
-  .cancel-btn {
-    background-color: red;
-    opacity: 50%;
-    transition: 0.2s;
-    font-size: 3em;
-  }
-  
-  .cancel-btn:hover {
-    opacity: 100%;
-    cursor: pointer;
-  }
-  
   .add-btn {
     background-color: green;
     opacity: 50%;
     transition: 0.2s;
     font-size: 3em;
+    margin-top: 5%;
   }
   
   .add-btn:hover {
     opacity: 100%;
     cursor: pointer;
   }
-  /*options styling end*/
 /*form styling end*/
 
 /*book card styling start*/
@@ -119,12 +100,12 @@ h2 {
   color: white;
   background-color: rgb(12, 27, 54);
   border-style: ridge;
+  border-radius: 10%;
   border-color: white;
-  width: 400px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  opacity: 50%;
+  padding: 2vmin;
+  width: min-content;
+  height: min-content;
+  opacity: 75%;
   transition: 0.2s;
 }
 
@@ -134,32 +115,34 @@ h2 {
 }
 
 .container {
-  margin-top: 60px;
+  margin: auto;
 }
 
   /*footer styling start*/
   .remove-btn {
     color: silver;
-    background-color: red;
+    background: none;
     border: none;
     opacity: 50%;
-    transition: 0.2s;
+    transition: 0.3s;
     font-size: 3em;
-    margin-top: 61.5px;
     width: 100%;
   }
   
   .remove-btn:hover {
     opacity: 100%;
+    color: red;
     cursor: pointer;
   }
 
   /*footer styling end*/
 
   .title {
-    margin-top: 10px;
-    font-size: 2em;
+    margin: auto;
+    font-size: 3em;
     font-style: italic;
+    width: min-content;
+    height: min-content;
   }
 
   .author {
@@ -167,8 +150,12 @@ h2 {
   }
 
   .pages {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 2em;
+  }
+
+  hr {
+    margin-top: 20px;
   }
 
 /*book card styling end*/
