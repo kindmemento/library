@@ -62,6 +62,7 @@ function displayLibrary() {
   footer.appendChild(remove)
   
   remove.onclick = () => {
+    myLibrary = myLibrary.filter((bookObj) => bookObj.title !== book.title)
     document.querySelector('.library').removeChild(bookCard)
   }
   })
