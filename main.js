@@ -39,6 +39,7 @@ function displayLibrary() {
   const author = document.createElement('div')
   const pages = document.createElement('div')
   const footer = document.createElement('footer')
+  const hr = document.createElement('hr')
   const remove = document.createElement('button')
   
   bookCard.classList.add('book-card')
@@ -59,6 +60,7 @@ function displayLibrary() {
   contentContainer.appendChild(author)
   contentContainer.appendChild(pages)
   contentContainer.appendChild(footer)
+  footer.appendChild(hr)
   footer.appendChild(remove)
   
   remove.onclick = () => {
