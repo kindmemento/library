@@ -59,7 +59,7 @@ function displayLibrary() {
   pages.innerText = book.pages + ' pages'
   if (book.read) {
     read.innerText = 'Read'
-    read.style.color = 'green'
+    read.style.color = 'rgb(0, 110, 0)'
   } else {
     read.innerText = 'Not read'
     read.style.color = 'red'
@@ -82,7 +82,7 @@ function displayLibrary() {
       book.read = false
     } else {
       read.innerText = 'Read'
-      read.style.color = 'green'
+      read.style.color = 'rgb(0, 110, 0)'
       book.read = true
     }
   }
